@@ -56,7 +56,6 @@ function displayCat() {
     };
 }
 
-// Function to display the cat-heart.gif
 function displayCatHeart() {
     // Clear existing content in the image container
     document.getElementById('image-container').innerHTML = '';
@@ -71,10 +70,23 @@ function displayCatHeart() {
     // When the cat-heart image is fully loaded, add it to the image container
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
+        
         // Hide the options container
         document.getElementById('options').style.display = 'none';
+
+        // Create a button element
+        var nextButton = document.createElement('button');
+        nextButton.innerText = 'Yipee!, Now click here <3';
+        nextButton.onclick = function() {
+            // Redirect to another page (replace 'next-page.html' with the actual page URL)
+            window.location.href = 'bdayoutline.html';
+        };
+        
+        // Append the button below the image
+        imageContainer.appendChild(nextButton);
     };
 }
+
 
 // Display the cat.gif initially
 displayCat();
