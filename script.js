@@ -11,21 +11,21 @@ function selectOption(option) {
         });
     } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'You sure?'; 
+        document.getElementById('no-button').innerText = 'You sure wheezy?'; 
         // Increase font size of "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
+        var newSize = parseFloat(currentFontSize) * 3; // Increase font size by  * 2px
         yesButton.style.fontSize = newSize + 'px';
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
         alert('Invalid option!');
     }
 }
-//sdfsdf
+
 // Function to flash rainbow colors and then execute a callback function
 function flashRainbowColors(callback) {
-    var colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
+    var colors = ['#EFEBE0', '#FB8DA0', '#FB6B90', '#EC9EC0', '#A91B60', '#D67BA8'];
     var i = 0;
     var interval = setInterval(function() {
         document.body.style.backgroundColor = colors[i];
@@ -40,14 +40,14 @@ function flashRainbowColors(callback) {
     }, 2000); // Flash colors for 2 seconds
 }
 
-// Function to display the cat.gif initially
+// Function to display the milkmochaphoto.png initially
 function displayCat() {
     // Get the container where the image will be displayed
     var imageContainer = document.getElementById('image-container');
-    // Create a new Image element for the cat
+    // Create a new Image element for the milkmochaphoto.png
     var catImage = new Image();
-    // Set the source (file path) for the cat image
-    catImage.src = 'cat.gif'; // Assuming the cat image is named "cat.gif"
+    // Set the source (file path) for the image
+    catImage.src = 'milkmochaphoto.png'; // 
     // Set alternative text for the image (for accessibility)
     catImage.alt = 'Cat';
     // When the cat image is fully loaded, add it to the image container
